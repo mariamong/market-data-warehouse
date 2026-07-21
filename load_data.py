@@ -4,9 +4,11 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
+'''Reads .env file'''
 load_dotenv()
 engine = create_engine(os.getenv("DATABASE_URL"))
 
+'''Initialize ticker, start, and end_date'''
 TICKERS = ["AAPL", "MSFT", "GOOGL", "JPM", "GS"]
 START_DATE = "2023-01-01"
 END_DATE = "2026-07-07"

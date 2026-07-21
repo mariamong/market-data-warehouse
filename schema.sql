@@ -12,11 +12,11 @@ CREATE TABLE IF NOT EXISTS dim_company (
     created_at      TIMESTAMP DEFAULT NOW()
 );
 
--- Index for fast current-record lookups
+-- Index for fast current record lookups
 CREATE INDEX IF NOT EXISTS idx_dim_company_ticker 
     ON dim_company(ticker) WHERE is_current = TRUE;
 
--- Date dimension for time-based analysis
+-- Date dimension for time based analysis
 CREATE TABLE IF NOT EXISTS dim_date (
     date_key        DATE PRIMARY KEY,
     year            INT,
