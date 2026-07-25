@@ -6,7 +6,7 @@ UPDATE dim_company
 SET expiry_date = '2026-07-21',
     is_current = FALSE
 WHERE ticker = 'AAPL'
-AND is_current = FALSE;
+AND is_current = TRUE;
 
 -- Step 2: View both historical records
 SELECT ticker, sector, effective_date, expiry_date, is_current
